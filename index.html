@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-6 p-5 mx-auto">
+        <div class="col-7 p-5 mx-auto">
           <h3 class="text-center mb-5">
             Fix error
             <span class="bg-secondary text-white p-1"
@@ -31,6 +31,47 @@
           <h5 class="bg-dark text-white p-1">
             npx react-native init myAwesomeApp --version 0.68.2
           </h5>
+        </div>
+
+        <div class="col-7 p-5 mx-auto">
+          <h3 class="text-center mb-5">
+            Fix error
+            <span class="bg-secondary text-white p-1"
+              >SDK location not found. Define location with an ANDROID_SDK_ROOT
+              environment variable or by setting the sdk.dir path in your
+              project's local.properties file
+            </span>
+            when running react native cli project
+          </h3>
+          <h5 class="mb-5">
+            In order to fix this error, you need to create a
+            <span class="bg-secondary text-white p-1">local.properties</span>
+            file inside the 'android' directory and paste inside:
+          </h5>
+          <h5 class="bg-dark text-white p-1">
+            sdk.dir = /home/YOUR_USER/Android/Sdk
+          </h5>
+        </div>
+
+        <div class="col-7 p-5 mx-auto">
+          <h3 class="text-center mb-5">
+            All React Native CLI variables to add in .bashrc
+          </h3>
+
+          <h5 class="bg-dark text-white p-1">
+            export ANDROID_SDK_ROOT=$HOME/Android/Sdk export
+            ANDROID_HOME=$HOME/Android/Sdk export
+            PATH=$PATH:$ANDROID_HOME/emulator:$PATH export
+            PATH=$PATH:$ANDROID_HOME/tools:$PATH export
+            PATH=$PATH:$ANDROID_HOME/tools/bin:$PATH export
+            PATH=$PATH:$ANDROID_HOME/platform-tools:$PATH
+          </h5>
+        </div>
+
+        <div class="col-7 p-5 mx-auto">
+          <h3 class="text-center mb-5">Kill adb server</h3>
+
+          <h5 class="bg-dark text-white p-1">adb kill-server</h5>
         </div>
       </div>
     </div>
